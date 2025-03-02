@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/header.ejs") %>
+<body>
+    <section id="book-info">
+        <div class="info-wrapper">
+            <h2><%= book.book_name %></h2>
+            <h3><span>by</span> <%= book.author %></h3>
+            <div class="ratings-wrapper review-ratings stars">
+                <%
+                        let fullStars = Math.floor(book.ratings); // Get the number of full stars
+                        let halfStars = (book.ratings - fullStars) >= 0.5 ? 1 : 0; // If there's a half-star, set it to 1
+                        let emptyStars = 5 - fullStars - halfStars; // Calculate remaining empty stars
+                    %>
+
+                    <% for (let i = 0; i < fullStars; i++) { %>
+                        <i class="fa fa-star"></i>
+                    <% } %>
+
+                    <% if (halfStars) { %>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <% } %>
+
+                    <% for (let i = 0; i < emptyStars; i++) { %>
+                        <i class="fa fa-star-o"></i>
+                    <% } %>
+            </div>
+            <h4>Summary</h4>
+            <p><%= book.summary %></p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" alt="<%= book.book_name %> book cover"/>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="review">
+        <div class="review-wrapper">
+            <h3>My Thoughts</h3>
+            <p><%= book.thoughts %></p>
+        </div>
+        <div class="review-wrapper">
+            <h3>Key Takeaways</h3>
+            <p><%= book.key_takeaways%></p>
+        </div>
+    </section>
+    <div class="edit-deleteWrapper">
+        <form action="/edit/<%= book.id %>"  method="get">
+            <button class="edit-deleteBtn" id="edit-btn">Edit</button>
+        </form>
+        <form action="/delete/<%= book.id%>"  method="post">
+            <button class="edit-deleteBtn" id="delete-btn">Delete</button>
+        </form>
+    </div>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>

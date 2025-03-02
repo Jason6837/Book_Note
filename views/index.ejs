@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/header.ejs") %>
+
+<body>
+    <section id="intro">
+        <div class="intro-wrapper">
+            <h1>The Book Worm</h1>
+            <p class="intro-text">
+                Hey there! I’ve put together this website to showcase the books I’ve read, complete with reviews, notes, and ratings. Why? Well, I tend to forget what I’ve read, and this helps me keep track of my favorites. Plus, sharing my thoughts either makes me look insightful or just plain nerdy—depends on your perspective. Either way, here we are!
+            </p>
+            <p class="intro-text">
+                I haven’t uploaded all my reviews yet—there are a lot of books, and, let’s be honest, procrastination is real. But feel free to browse through my collection and judge my reading choices.
+            </p>
+            <p class="intro-text">
+                Now, I’m no literary critic, so take my recommendations with a grain of salt—my ratings and reviews are purely personal. But if you're here for book talk, welcome! Dive in, explore, and happy reading!
+            </p>
+        </div>
+    </section>
+    
+    <form class="book-count-wrapper" action="/create" method="get">
+        <h2 class="border-left">Total Books Featured: <%= books.length %></h2>
+        <button id="entry-btn">+ New Entry</button>
+    </form>
+
+    <section class="content">
+        <% books.forEach(book => { %>
+            <a class="content-wrapper" href="/book/<%= book.id %>">
+                <img class="image" src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" alt="<%= book.book_name %> book cover"/>
+                <h2 class="book-title padding"><%= book.book_name %></h2>
+                <p class="author padding"><%= book.author%></p>
+                <p class="genre padding"><%= book.genre %></p>
+                <div class="ratings-wrapper padding"> 
+                    <%
+                        let fullStars = Math.floor(book.ratings); // Get the number of full stars
+                        let halfStars = (book.ratings - fullStars) >= 0.5 ? 1 : 0; // If there's a half-star, set it to 1
+                        let emptyStars = 5 - fullStars - halfStars; // Calculate remaining empty stars
+                    %>
+
+                    <% for (let i = 0; i < fullStars; i++) { %>
+                        <i class="fa fa-star"></i>
+                    <% } %>
+
+                    <% if (halfStars) { %>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <% } %>
+
+                    <% for (let i = 0; i < emptyStars; i++) { %>
+                        <i class="fa fa-star-o"></i>
+                    <% } %>
+                </div>
+            </a>
+        <% }); %> 
+    </section>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

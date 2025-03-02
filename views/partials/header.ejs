@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Worm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<header>
+    <a id="logo-link" href="/">
+        <img id="logo" src="/images/bookworm-logo.png" alt="bookworm-logo">
+    </a>
+    <form  class="search-container" action="/search" method="get">
+        <input type="text" class="search-box" name="search" autofocus placeholder="<%= typeof error !== 'undefined' ? error : 'Enter book name' %>">
+        <button class="search-button">
+            <img id="google" src="/images/index-google.png" alt="google">
+        </button>
+    </form>
+    
+    <div class="container">
+        <p>Sort by:</p>
+        <div class="form-wrapper">
+            <form class="link-wrapper" action="/sort" method="post">
+                <input class="header-link" type="submit" name="alphabet" value="Alphabet">
+                <input class="header-link" type="submit" name="ratings" value="Ratings">
+            </form>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Genres</button>
+                <form id="myDropdown"   class="dropdown-content" action="/sort" method="post">
+                    <input type="submit" name="fiction" value="Fiction">
+                    <input type="submit" name="nonFiction" value="Non-fiction">
+                    <input type="submit" name="autobiography" value="Autobiography">
+                    <input type="submit" name="selfHelp" value="Self-help">
+                </form>
+        </div>
+        </div>
+    </div>
+</header>

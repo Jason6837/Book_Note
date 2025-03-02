@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/header.ejs") %>
+
+<body>
+    <section class="content">
+        <% books.forEach(book => { %>
+            <a class="content-wrapper" href="/book/<%= book.id %>">
+                <img class="image" src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" alt="<%= book.book_name %> book cover"/>
+                <h2 class="book-title"><%= book.book_name %></h2>
+                <p class="author"><%= book.author%></p>
+                <p class="genre"><%= book.genre %></p>
+                <div class="ratings-wrapper"> 
+                    <%
+                        let fullStars = Math.floor(book.ratings); // Get the number of full stars
+                        let halfStars = (book.ratings - fullStars) >= 0.5 ? 1 : 0; // If there's a half-star, set it to 1
+                        let emptyStars = 5 - fullStars - halfStars; // Calculate remaining empty stars
+                    %>
+
+                    <% for (let i = 0; i < fullStars; i++) { %>
+                        <i class="fa fa-star"></i>
+                    <% } %>
+
+                    <% if (halfStars) { %>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <% } %>
+
+                    <% for (let i = 0; i < emptyStars; i++) { %>
+                        <i class="fa fa-star-o"></i>
+                    <% } %>
+                </div>
+            </a>
+        <% }); %> 
+    </section>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }      
+    </script>
+</body>
+</html>

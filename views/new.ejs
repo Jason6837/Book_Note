@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Book Worm</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+<body id="new">
+    <div class="wrapper">
+        <form id="new-form" action="/new" method="post">
+          <h2>Fill In Book Details</h2>
+          <div class="input-field">
+              <input type="text" name="title" required>
+              <label>Book Title</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="author" required>
+            <label>Book Author</label>
+          </div>
+          <div class="input-field">
+            <input type="text" name="genre" required>
+            <label>Book Genre</label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="isbn" required>
+            <label>Book ISBN</label>
+          </div>
+          <div class="new-ratings-wrapper">
+            <label>Rate This Book</label>
+            <fieldset class="rate">
+              <input type="radio" id="rating10" name="ratings" value="5" /><label for="rating10" title="5 stars"></label>
+              <input type="radio" id="rating9" name="ratings" value="4.5" /><label class="half" for="rating9" title="4 1/2 stars"></label>
+              <input type="radio" id="rating8" name="ratings" value="4" /><label for="rating8" title="4 stars"></label>
+              <input type="radio" id="rating7" name="ratings" value="3.5" /><label class="half" for="rating7" title="3 1/2 stars"></label>
+              <input type="radio" id="rating6" name="ratings" value="3" /><label for="rating6" title="3 stars"></label>
+              <input type="radio" id="rating5" name="ratings" value="2.5" /><label class="half" for="rating5" title="2 1/2 stars"></label>
+              <input type="radio" id="rating4" name="ratings" value="2" /><label for="rating4" title="2 stars"></label>
+              <input type="radio" id="rating3" name="ratings" value="1.5" /><label class="half" for="rating3" title="1 1/2 stars"></label>
+              <input type="radio" id="rating2" name="ratings" value="1" /><label for="rating2" title="1 star"></label>
+              <input type="radio" id="rating1" name="ratings" value="0.5" /><label class="half" for="rating1" title="1/2 star"></label>
+            </fieldset>
+          </div>
+          <div class="textarea-content" id="book-summary">
+            <label>Book Summary</label>
+            <textarea name="summary" id="summary" cols="30" rows="10"></textarea>
+          </div>
+          <div class="textarea-content">
+            <label>Your Thoughts</label>
+            <textarea name="thoughts" id="thoughts" cols="30" rows="10"></textarea>
+          </div>
+          <div class="textarea-content">
+            <label>Key Takeaways</label>
+            <textarea name="key_takeaways" id="keyTakeaways" cols="30" rows="10"></textarea>
+          </div>
+          <button id="create-btn" type="submit">Create New Entry</button>
+        </form>
+    </div>
+</body>
+</html>

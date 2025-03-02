@@ -1,0 +1,863 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: goldenrod;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+}
+
+#logo-link {
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    border: none;
+}
+
+#logo-link:hover {
+    opacity: 50%;
+    transition: 0.5s ease;
+}
+
+#logo {
+    height: 100%;
+    width: 120px;
+}
+
+.search-container {
+    position: relative;
+    border-radius: 30px;
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: goldenrod;
+    border: 2px solid black;
+    padding: 0;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-box {
+    font-size: 15px;
+    height: 48px;
+    width: 88%;
+    border-radius: 40px;
+    background-color: goldenrod;
+    padding: 8px 24px;
+    flex-grow: 2;
+    border: none;
+}
+
+button {
+    transition: 0.3s ease;
+}
+
+#google {
+    width: 32px;
+    height: 32px;
+}
+
+.search-button {
+    position: absolute;
+    border-radius: 30px;
+    height: 100%;
+    width: 48px;
+    border: 2px solid black;
+    background-color: goldenrod;
+    cursor: pointer;
+    flex-grow: 0;
+    padding: 0;
+    margin: 0;
+    right: 0.001px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button:hover {
+    opacity: 50%;
+    transition: 0.3s ease;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+header p {
+    font-size: 10px;
+}
+
+.form-wrapper {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-wrapper {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.link-wrapper input{
+    border: none;
+    cursor: pointer;
+}
+
+.header-link {
+    text-decoration: none;
+    background-color: goldenrod;
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.header-link:hover {
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    color:black;
+    background-color: goldenrod;
+    border: none;
+    padding: none;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    color: white;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+  }
+
+  .dropdown-container {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+  }
+
+  .dropdown-container:hover {
+    opacity: 50%;
+    cursor: pointer;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content input {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content input:hover {background-color: goldenrod; color: white; transition: 0.3s ease-in-out;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+#intro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background: url(./images/index-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 24px;
+}
+
+.intro-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 16px 24px;
+    background-color: rgba(244, 238, 255, 0.4);
+    border-radius: 8px;
+}
+
+.intro-text {
+    line-height: 1.6;
+}
+
+h1 {
+    border-bottom: 3px solid black;
+    padding-bottom: 8px;
+    width: fit-content;
+}
+
+.content {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 8px 0 32px;
+    padding: 16px 40px;
+    gap: 24px;
+}
+
+.book-count-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+}
+
+.border-left {
+    border-left: 8px solid gold;
+    color: black;
+    padding-left: 16px;
+}
+
+#entry-btn {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 600;
+    color: black;
+    padding: 12px 16px;
+    border: none;
+    background-color: gold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#entry-btn:hover {
+    opacity: 50%;
+    color: white;
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+.content-wrapper {
+    border-radius: 4px;
+    height: 480px;
+    width: 240px;
+    color: black;
+    background-color:beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.content-wrapper:hover {
+    opacity: 50%;
+    transition: 0.5s ease;
+}
+
+.image {
+    height: 320px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.book-title {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 4px;
+    width: 100%;
+    height: fit-content;
+    color: #000;
+}
+
+.author {
+    font-size: 16px;
+    padding: 0 4px;
+    width: 100%;
+    height: fit-content;
+    color: #000;
+}
+
+.genre {
+    font-size:16px;
+    padding: 0 4px;
+    color:lightslategray;
+    width: 100%;
+    height: fit-content;
+}
+
+.ratings-wrapper {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 16px;
+    padding: 0 4px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.padding {
+    padding: 0 12px;
+}
+
+.fa {
+    color: gold;
+    font-size: 20px;
+}
+
+#book-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 24px 48px;
+}
+
+#book-info p{
+    line-height: 1.6;
+}
+
+.img-wrapper {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper img{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+span {
+    font-weight: 300;
+    font-size: 16px;
+    color:#a6a6a6;
+    padding-right: 8px;
+}
+
+#book-info img {
+    border: 1px solid black;
+    width: 280px;
+    height: 320px;
+}
+
+.info-wrapper {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-wrapper h2 {
+    color: #000;
+}
+
+.review-ratings {
+    padding: 0;
+    margin: 0;
+}
+
+#review {
+    padding: 24px 48px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#review p{
+    line-height: 1.6;
+}
+
+.review-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 16px;
+}
+
+.edit-deleteWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px
+}
+
+.edit-deleteBtn {
+    text-decoration: none;
+    text-align: center;
+    width: 88px;
+    height: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.edit-deleteBtn:hover {
+    opacity: 50%;
+}
+
+#edit-btn {
+    background-color: #424874;
+}
+
+#delete-btn {
+    background-color: indianred;
+}
+
+footer {
+    background-color:goldenrod;
+    padding: 16px 40px;
+    margin-top: 16px;
+}
+
+hr{
+    margin: 16px 48px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#disclaimer {
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: black;
+}
+
+/* new.ejs */ 
+
+#new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  background: url(./images/create-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 32px 0;
+}
+
+#new::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+#new-form {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid white;
+  margin: 16px 0;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.wrapper textarea {
+  padding: 8px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+#book-summary {
+  margin-top: 24px;
+}
+
+.textarea-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+  color: white;
+}
+
+#create-btn {
+  background: lightsalmon;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+#create-btn:hover {
+  color: white;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* star ratings in new.ejs */
+
+.new-ratings-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 8px;
+    padding: 0;
+}
+
+.new-ratings-wrapper label {
+    font-size: 16px;
+    color: white;
+}
+
+/* Ratings widget */
+.rate {
+    display: inline-block;
+    border: 0;
+}
+/* Hide radio */
+.rate > input {
+    display: none;
+}
+/* Order correctly by floating highest to the right */
+.rate > label {
+    float: right;
+}
+/* The star of the show */
+.rate > label:before {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: .3rem .2rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005 "; /* full star */
+}
+/* Zero stars rating */
+.rate > label:last-child:before {
+    content: "\f006 "; /* empty star outline */
+}
+/* Half star trick */
+.rate .half:before {
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+/* Click + hover color */
+input:checked ~ label, /* color current and previous stars on checked */
+label:hover, label:hover ~ label { color: gold;  } /* color previous stars on hover */
+
+/* Hover highlights */
+input:checked + label:hover, input:checked ~ label:hover, /* highlight current and previous stars */
+input:checked ~ label:hover ~ label, /* highlight previous selected stars for new rating */
+label:hover ~ input:checked ~ label /* highlight previous selected stars */ { color: gold;  } 
+
+/* edit.ejs */ 
+
+#edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    background: url(./images/edit-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 32px 0;
+  }
+  
+  .wrapper {
+    width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+  }
+  
+  #edit-form {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+  
+  .wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .wrapper label {
+    font-weight: 600;
+  }
+
+  .wrapper textarea {
+    padding: 8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: 2px solid white;
+    border-radius: 8px;
+  }
+  
+  .small {
+    height: 36px;
+  }
+
+  #book-summary {
+    margin-top: 24px;
+  }
+  
+  .textarea-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    color: white;
+  }
+  
+  #submit-btn {
+    background: lightsalmon;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+  }
+  
+  #submit-btn:hover {
+    color: white;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* star ratings in edit.ejs */
+  
+  .edit-ratings-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 0 8px;
+      padding: 0;
+  }
+  
+  .edit-ratings-wrapper label {
+      font-size: 16px;
+      color: white;
+  }
+  
+  /* Ratings widget */
+  .rate {
+      display: inline-block;
+      border: 0;
+  }
+  /* Hide radio */
+  .rate > input {
+      display: none;
+  }
+  /* Order correctly by floating highest to the right */
+  .rate > label {
+      float: right;
+  }
+  /* The star of the show */
+  .rate > label:before {
+      display: inline-block;
+      font-size: 1.1rem;
+      padding: .3rem .2rem;
+      margin: 0;
+      cursor: pointer;
+      font-family: FontAwesome;
+      content: "\f005 "; /* full star */
+  }
+  /* Zero stars rating */
+  .rate > label:last-child:before {
+      content: "\f006 "; /* empty star outline */
+  }
+  /* Half star trick */
+  .rate .half:before {
+      content: "\f089 "; /* half star no outline */
+      position: absolute;
+      padding-right: 0;
+  }
+  /* Click + hover color */
+  input:checked, /* color current and previous stars on checked */
+
+
+  /*responsive*/
+  @media screen and (max-width: 600px){
+    .book-count-wrapper {
+        padding: 8px 16px;
+    }
+    
+    .border-left {
+        padding-left: 8px;
+        font-size: 16px;
+    }
+    
+    #entry-btn {
+        font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .intro-wrapper {
+        width: 100%;
+    }
+
+    .intro-text {
+        width: 100%;
+    }
+    }
+
+  @media screen and (max-width: 850px) {
+    #book-info {
+        justify-content: none;
+        gap: 48px;
+        padding: 24px 48px;
+        flex-direction: column-reverse;
+    }
+
+    .info-wrapper {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+  }
