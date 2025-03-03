@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(methodOverride("_method"));
 
 const db = new pg.Client({
-	user: "postgres",
-	host: "localhost",
-	database: "books",
-	password: "1234",
+	user: "books_wfce_user",
+	host: "dpg-cv2karjqf0us73fttkdg-a",
+	database: "books_wfce",
+	password: "Oc4i72IwHWOIDIiWb6gFxynKETt5Z8YP",
 	port: 5432
 });
 
